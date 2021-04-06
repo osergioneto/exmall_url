@@ -17,12 +17,16 @@ defmodule ExmallUrlWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
+    # get "/:link_path", PageController, :redirect_url
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ExmallUrlWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", ExmallUrlWeb do
+    pipe_through :api
+
+    post "/users", UsersController, :create
+  end
 
   # Enables LiveDashboard only for development
   #
