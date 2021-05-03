@@ -3,7 +3,8 @@ defmodule ExmallUrl.Repo.Migrations.CreateLinksTable do
 
   def change do
     create table(:links) do
-      add(:path, :string)
+      add(:path, :text)
+      add(:to_url, :text)
       add(:user_id, references(:users, type: :binary_id, null: true))
 
       timestamps()
