@@ -5,6 +5,7 @@ defmodule ExmallUrl.Link do
 
   alias ExmallUrl.User
 
+  @primary_key {:id, :binary_id, autogenerate: true}
   @required_params [:path, :to_url]
   @optional_params [:user_id]
   @path_regex ~r/^[a-z0-9]+(?:-[a-z0-9]+)*$/i
