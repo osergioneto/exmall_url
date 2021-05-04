@@ -26,6 +26,8 @@ defmodule ExmallUrlWeb.Router do
     pipe_through :api
 
     post "/users", UsersController, :create
+
+    post "/links", LinkController, :create
   end
 
   # Enables LiveDashboard only for development
