@@ -14,7 +14,7 @@ defmodule ExmallUrl.Link do
   schema "links" do
     field :path, :string
     field :to_url, :string
-    belongs_to(:users, User)
+    belongs_to(:user, User)
 
     timestamps()
   end
