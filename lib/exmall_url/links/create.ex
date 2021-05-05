@@ -1,4 +1,4 @@
-defmodule ExmallUrl.Links do
+defmodule ExmallUrl.Links.Create do
   alias Ecto
   alias ExmallUrl.{Link, Repo}
 
