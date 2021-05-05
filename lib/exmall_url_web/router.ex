@@ -18,7 +18,7 @@ defmodule ExmallUrlWeb.Router do
 
     get "/", PageController, :index
 
-    # get "/:link_path", PageController, :redirect_url
+    get "/:path", LinkController, :show
   end
 
   # Other scopes may use custom stacks.
