@@ -22,9 +22,9 @@ defmodule ExmallUrlWeb.ErrorView do
     %{message: translate_errors(changeset)}
   end
 
-  # def render("400.json", %{result: message}) do
-  #   %{message: message}
-  # end
+  def render("404.json", %{result: :not_found}) do
+    %{message: :not_found}
+  end
 
   def translate_errors(changeset) do
     traverse_errors(changeset, fn {msg, opts} ->
