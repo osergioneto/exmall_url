@@ -1,7 +1,6 @@
 defmodule ExmallUrl.Links.CreateTest do
   use ExmallUrl.DataCase, async: true
 
-  alias ExmallUrl.Link
   alias ExmallUrl.Links.Create
 
   describe "Links.call/1" do
